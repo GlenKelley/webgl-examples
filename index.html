@@ -15,6 +15,12 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
+    <script src="src/three.min.js"></script>
+    <script src="src/collada_loader.js"></script>
+    <script src="src/detector.js"></script>
+    <script src="src/stats.min.js"></script>
+    <script src="src/display_model.js"></script>
+    
     <!-- Custom styles for this template -->
     <!-- <link href="sticky-footer.css" rel="stylesheet"> -->
     <style>
@@ -51,10 +57,17 @@
         .container .credit {
           margin: 20px 0;
         }
+        #canvas_container {
+            width:640px;
+            height:480px;
+        }
+        #stats {
+            left: 0;
+        }
     </style>
   </head>
   <body>
-      <a href="https://github.com/GlenKelley/webgl-examples"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
+      <a href="https://github.com/GlenKelley/webgl-examples"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
     <!-- Wrap all page content here -->
     <div id="wrap">
       <!-- Begin page content -->
@@ -63,6 +76,7 @@
           <h1>Feel the Awesome</h1>
         </div>        
         <p class="lead">Canvas 3D models with <a href="three.js">three.js</a></p>
+        <div id="canvas_container"></div>
       </div>
     </div>
 
